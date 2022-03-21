@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+header {
+    flex-basis: 100%;
+    border-bottom: 1px aqua;  
+}
+header ul {
+    display: flex;
+    justify-content: space-around;  
+}
+header li {
+    list-style-type: none;
+}
+.section {
+    background-color: #88c1d0;
+    margin: 1rem;
+}
+@media screen and (min-width:1600px){ 
+    .section {
+        width: 20vw;
+        height: 30vh;
+    } 
+}
+@media screen and (min-width: 768px) and (max-width: 1599px){ 
+    .section {
+        width: 40vw;
+        height: 30vh;
+    }
+}
+@media screen and (max-width: 767px){ 
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        width: 40vw;
+        height: 30vh;
+    }
+    nav {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+        
+    }  
+    nav.active  {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    ul  {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-burger {
+        position: absolute; /*On positionne le */
+        top : 2em;
+        right : 3em;
+    }
+    .menu-burger span {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 7px;
+        background-color : #ff2a70;
+        border-radius: 25px;
+    }
+    .menu-burger :nth-child(1) { /*On positionne les spans à 10px l'une de l'autre*/
+        transform: translateY(10px);
+    }
+    .menu-burger :nth-child(2) { /*On positionne les spans à 10px l'une de l'autre*/
+        transform: translateY(-10px);
+    }
+    .menu-burger.active :nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .menu-burger.active :nth-child(2) {
+        transform: rotate(-45deg);
+    }
+    .menu-burger.active :nth-child(3) {
+        display: none;
+    }
+    .menu-burger.active :nth-child(1) {
+        transition: all 330ms;
+    }
+    .menu-burger.active :nth-child(2) {
+        transition: all 330ms;
+    }
+}
