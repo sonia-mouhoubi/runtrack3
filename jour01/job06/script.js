@@ -9,10 +9,6 @@ function fizzbuzz() {
       else if (i % 5 == 0) { 
          console.log('Buzz');
       }
-      // else {
-      //    console.log('FizzBuzz');
-   
-      // }
    }
 }
 
