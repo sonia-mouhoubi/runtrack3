@@ -6,4 +6,5 @@ window.addEventListener("DOMContentLoaded", () => {
       let lettre = event.key;
       textarea.value =  textareaLettre + lettre ;
    });
+   
 });
