@@ -9,7 +9,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <button id="button">le $ est un bon élément monétaire. Le # de twitter est bonne I D. Il faudra faire le point avec la classe pour cacher cet élément.</button>
+    <button id="button">Afficher</button>
     <button id="hide">Cacher</button>
 </body>
 </html>
